@@ -1,0 +1,12 @@
+デバックモードon
+flask --app hello(←メインファイル名) --debug run
+
+アプリ起動
+flask --app hello run
+
+土日は株取引が行われないらしい
+Equity Final 最終資産額
+Return（Ann）年平均リターン
+Win Rate [%] #勝率（勝ち回数/取引回数）
+
+

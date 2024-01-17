@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>デモトレード</h1>
+    <p>元金($),レバレッジ係数の逆数,短期SMA,長期SMAを入力してください</p>
+    <form action="/demotrade/cal" method="POST">
+        <input name="data1"></input>
+        <input name="data2"></input>
+        <input name="data3"></input>
+        <input name="data4"></input>
+        <button type="submit">送信</button>
+    </form>
+
+  
+    
+{% endblock %}

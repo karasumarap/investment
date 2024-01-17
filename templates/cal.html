@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>デモトレード</h1>
+<p>短期SMAは{{data3}},長期SMAは{{data4}}で計算しています。</p>
+    <h2>結果の表</h2>
+        <table border="1">
+            <tr>
+                <th>対象</th>
+                <th>元金($)</th>
+                <th>最終金額($)</th>
+                <th>利益($)</th>
+                <th>年利(%)</th>
+                <th>勝率(%)</th>
+            </tr>
+            {% for result in result_list %}
+                <tr>
+                    <td>{{result['Symbol']}}</td>
+                    <td>{{data1}}</td>
+                    <td>{{result['Equity Final']}}</td>
+                    <td>{{result['Profit']}}</td>
+                    <td>{{result['Return (Ann)']}}</td>
+                    <td>{{result['Win Rate']}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    <p>勝率=勝ち回数/取引回数</p>
+    <p>取引手数料は0.00495($)で計算</p>
+    <p>対象期間は"2020-1-5"から"2023-1-5"</p>
+    
+{% endblock %}
